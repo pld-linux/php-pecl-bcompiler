@@ -9,7 +9,7 @@ License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	c51ba61c9497a5744ffd1d252c7d0935
-URL:		http://pear.php.net/package/%{_pearname}/
+URL:		http://pear.php.net/package/bcompiler/
 BuildRequires:	libtool
 BuildRequires:	php-devel
 Requires:	php-common
