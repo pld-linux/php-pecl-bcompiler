@@ -3,12 +3,12 @@
 Summary:	%{_modname} - A bytecode compiler for classes
 Summary(pl):	%{_modname} - Kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	c51ba61c9497a5744ffd1d252c7d0935
+# Source0-md5:	256a05228d5f7589955ec1d29bc88765
 URL:		http://pecl.php.net/package/bcompiler/
 BuildRequires:	libtool
 BuildRequires:	php-devel
