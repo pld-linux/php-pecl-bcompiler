@@ -1,10 +1,11 @@
 %define		_modname	bcompiler
+%define		_status		beta
 Summary:	%{_modname} - A bytecode compiler for classes
 Summary(pl):	%{_modname} - Kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
 Version:	0.5
 Release:	1
-License:	PHP 2.02
+License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	c51ba61c9497a5744ffd1d252c7d0935
@@ -29,6 +30,8 @@ situations:
 - to deliver close source applications
 - for use on embedded systems, where disk space is a priority.
 
+This extension has in PEAR status: %{_status}
+
 %description -l pl
 bcompiler pozwala na zakodowanie skryptów do kodu bajtowego PHP,
 pozwalaj±c na chronienie zwojego kodu. bcompiler mo¿e byæ u¿ywany w
@@ -40,6 +43,8 @@ nastêpuj±cych sytuacjach:
   od op³at),
 - dostarczanie aplikacji o zamkniêtym kodzie,
 - u¿ycie na systemach embedded, gdzie wielko¶æ jest priorytetem.
+
+To rozszerzenie ma w PEAR status: %{_status}
 
 %prep
 %setup -q -c
