@@ -30,11 +30,11 @@ situations:
 - to deliver close source applications
 - for use on embedded systems, where disk space is a priority.
 
-This extension has in PEAR status: %{_status}
+This extension has in PEAR status: %{_status}.
 
 %description -l pl
 bcompiler pozwala na zakodowanie skryptów do kodu bajtowego PHP,
-pozwalaj±c na chronienie zwojego kodu. bcompiler mo¿e byæ u¿ywany w
+pozwalaj±c na chronienie swojego kodu. bcompiler mo¿e byæ u¿ywany w
 nastêpuj±cych sytuacjach:
 - tworzenie plików exe dla aplikacji PHP-GTK (w po³±czeniu z innym
   oprogramowaniem),
@@ -44,7 +44,7 @@ nastêpuj±cych sytuacjach:
 - dostarczanie aplikacji o zamkniêtym kodzie,
 - u¿ycie na systemach embedded, gdzie wielko¶æ jest priorytetem.
 
-To rozszerzenie ma w PEAR status: %{_status}
+To rozszerzenie ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
