@@ -2,12 +2,12 @@
 Summary:	%{_modname} - A bytecode compiler for classes
 Summary(pl):	%{_modname} - Kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	ef026c998291a386c69f62891e69d5bb
+# Source0-md5:	c51ba61c9497a5744ffd1d252c7d0935
 URL:		http://pear.php.net/
 BuildRequires:	libtool
 BuildRequires:	php-devel
