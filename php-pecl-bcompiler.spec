@@ -30,7 +30,7 @@ situations:
 - to deliver close source applications
 - for use on embedded systems, where disk space is a priority.
 
-This extension has in PEAR status: %{_status}.
+In PECL status of this package is: %{_status}.
 
 %description -l pl
 bcompiler pozwala na zakodowanie skryptów do kodu bajtowego PHP,
@@ -44,7 +44,7 @@ nastêpuj±cych sytuacjach:
 - dostarczanie aplikacji o zamkniêtym kodzie,
 - u¿ycie na systemach embedded, gdzie wielko¶æ jest priorytetem.
 
-To rozszerzenie ma w PEAR status: %{_status}.
+To rozszerzenie ma w PECL status: %{_status}.
 
 %prep
 %setup -q -c
