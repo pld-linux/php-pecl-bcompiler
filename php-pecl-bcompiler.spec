@@ -1,7 +1,7 @@
 %define		_modname	bcompiler
 %define		_status		beta
-Summary:	%{_modname} - A bytecode compiler for classes
-Summary(pl):	%{_modname} - Kompilator kodu bajtowego dla klas
+Summary:	%{_modname} - a bytecode compiler for classes
+Summary(pl):	%{_modname} - kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
 Version:	0.6
 Release:	1
