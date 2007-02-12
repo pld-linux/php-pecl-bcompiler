@@ -1,7 +1,7 @@
 %define		_modname	bcompiler
 %define		_status		beta
 Summary:	%{_modname} - a bytecode compiler for classes
-Summary(pl):	%{_modname} - kompilator kodu bajtowego dla klas
+Summary(pl.UTF-8):   %{_modname} - kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
 Version:	0.8
 Release:	1
@@ -31,17 +31,17 @@ situations:
 
 In PECL status of this package is: %{_status}.
 
-%description -l pl
-bcompiler pozwala na zakodowanie skryptów do kodu bajtowego PHP,
-pozwalaj±c na chronienie swojego kodu. bcompiler mo¿e byæ u¿ywany w
-nastêpuj±cych sytuacjach:
-- tworzenie plików exe dla aplikacji PHP-GTK (w po³±czeniu z innym
+%description -l pl.UTF-8
+bcompiler pozwala na zakodowanie skryptÃ³w do kodu bajtowego PHP,
+pozwalajÄ…c na chronienie swojego kodu. bcompiler moÅ¼e byÄ‡ uÅ¼ywany w
+nastÄ™pujÄ…cych sytuacjach:
+- tworzenie plikÃ³w exe dla aplikacji PHP-GTK (w poÅ‚Ä…czeniu z innym
   oprogramowaniem),
-- tworzenie bibliotek z zamkniêtym kodem,
-- tworzenie oprogramowania z ograniczonym czasem dzia³ania (zale¿nym
-  od op³at),
-- dostarczanie aplikacji o zamkniêtym kodzie,
-- u¿ycie na systemach embedded, gdzie wielko¶æ jest priorytetem.
+- tworzenie bibliotek z zamkniÄ™tym kodem,
+- tworzenie oprogramowania z ograniczonym czasem dziaÅ‚ania (zaleÅ¼nym
+  od opÅ‚at),
+- dostarczanie aplikacji o zamkniÄ™tym kodzie,
+- uÅ¼ycie na systemach embedded, gdzie wielkoÅ›Ä‡ jest priorytetem.
 
 To rozszerzenie ma w PECL status: %{_status}.
 
