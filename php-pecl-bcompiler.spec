@@ -3,12 +3,13 @@
 Summary:	%{_modname} - a bytecode compiler for classes
 Summary(pl.UTF-8):	%{_modname} - kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
-Version:	0.8
+Version:	0.9.2
 Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	bfc5646f8f7c1c2649d82f5a4e3c0760
+# Source0-md5:	adebd4455ef3452775a3da2691d0ed8c
+Patch0:		%{name}-php52.patch
 URL:		http://pecl.php.net/package/bcompiler/
 BuildRequires:	bzip2-devel
 BuildRequires:	php-devel >= 3:5.0.0
@@ -47,11 +48,10 @@ To rozszerzenie ma w PECL status: %{_status}.
 
 %prep
 %setup -q -c
+%patch0 -p1
 
 %build
 cd %{_modname}-%{version}
-cp -f config.m4.old config.m4
-cp -f Makefile.in.old Makefile.in
 phpize
 %configure
 
