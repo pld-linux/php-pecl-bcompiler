@@ -1,0 +1,14 @@
+--- php-pecl-bcompiler-0.9.2/bcompiler-0.9.2/bcompiler.c.orig	2010-01-03 23:00:10.490142276 +0100
++++ php-pecl-bcompiler-0.9.2/bcompiler-0.9.2/bcompiler.c	2010-01-03 23:04:26.440532359 +0100
+@@ -1489,7 +1489,11 @@
+ 		}
+ 	}
+ #else
++#if PHP_MINOR_VERSION < 3
++	if (!zend_is_callable(func, 0, &name)) {
++#else
+ 	if (!zend_is_callable(func, 0, &name TSRMLS_CC)) {
++#endif
+ 		if (name && *name == 0) {
+ 			func = NULL;
+ 		} else {
