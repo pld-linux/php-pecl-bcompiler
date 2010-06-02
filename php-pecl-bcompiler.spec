@@ -4,7 +4,7 @@ Summary:	%{_modname} - a bytecode compiler for classes
 Summary(pl.UTF-8):	%{_modname} - kompilator kodu bajtowego dla klas
 Name:		php-pecl-%{_modname}
 Version:	0.9.3
-Release:	1
+Release:	2
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
