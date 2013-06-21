@@ -1,23 +1,24 @@
-%define		_modname	bcompiler
-%define		_status		stable
-Summary:	%{_modname} - a bytecode compiler for classes
-Summary(pl.UTF-8):	%{_modname} - kompilator kodu bajtowego dla klas
-Name:		php-pecl-%{_modname}
+%define		php_name	php%{?php_suffix}
+%define		modname	bcompiler
+%define		status		stable
+Summary:	%{modname} - a bytecode compiler for classes
+Summary(pl.UTF-8):	%{modname} - kompilator kodu bajtowego dla klas
+Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.2
 Release:	3
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	99f76a5ef536d43180b41036a6a13e43
 URL:		http://pecl.php.net/package/bcompiler/
+BuildRequires:	%{php_name}-devel >= 3:5.0.0
 BuildRequires:	bzip2-devel
-BuildRequires:	php-devel >= 3:5.0.0
-BuildRequires:	rpmbuild(macros) >= 1.344
+BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
+Requires:	%{php_name}-tokenizer
 Requires:	php(core) >= 5.0.4
-Requires:	php-tokenizer
 Suggests:	php-bz2
-Obsoletes:	php-pear-%{_modname}
+Obsoletes:	php-pear-%{modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +32,7 @@ situations:
 - to deliver close source applications
 - for use on embedded systems, where disk space is a priority.
 
-In PECL status of this package is: %{_status}.
+In PECL status of this package is: %{status}.
 
 %description -l pl.UTF-8
 bcompiler pozwala na zakodowanie skryptów do kodu bajtowego PHP,
@@ -45,13 +46,13 @@ następujących sytuacjach:
 - dostarczanie aplikacji o zamkniętym kodzie,
 - użycie na systemach embedded, gdzie wielkość jest priorytetem.
 
-To rozszerzenie ma w PECL status: %{_status}.
+To rozszerzenie ma w PECL status: %{status}.
 
 %prep
-%setup -q -c
+%setup -qc
+mv %{modname}-%{version}/* .
 
 %build
-cd %{_modname}-%{version}
 phpize
 %configure
 
@@ -60,11 +61,10 @@ phpize
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
-
-install %{_modname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
-cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
-; Enable %{_modname} extension module
-extension=%{_modname}.so
+install -p modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
+; Enable %{modname} extension module
+extension=%{modname}.so
 EOF
 
 %clean
@@ -80,6 +80,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{_modname}-%{version}/examples/*
-%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%doc examples/*
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{modname}.so
