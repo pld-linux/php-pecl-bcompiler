@@ -5,7 +5,7 @@ Summary:	%{modname} - a bytecode compiler for classes
 Summary(pl.UTF-8):	%{modname} - kompilator kodu bajtowego dla klas
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.2
-Release:	3
+Release:	4
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -19,6 +19,7 @@ Requires:	%{php_name}-tokenizer
 Requires:	php(core) >= 5.0.4
 Suggests:	php-bz2
 Obsoletes:	php-pear-%{modname}
+Provides:	php(%{modname}) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
