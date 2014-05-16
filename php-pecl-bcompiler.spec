@@ -5,21 +5,20 @@ Summary:	%{modname} - a bytecode compiler for classes
 Summary(pl.UTF-8):	%{modname} - kompilator kodu bajtowego dla klas
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.2
-Release:	4
+Release:	5
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	99f76a5ef536d43180b41036a6a13e43
 URL:		http://pecl.php.net/package/bcompiler/
-BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	%{php_name}-devel >= 3:5.0.4
 BuildRequires:	bzip2-devel
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Requires:	%{php_name}-tokenizer
-Requires:	php(core) >= 5.0.4
 Suggests:	php-bz2
-Obsoletes:	php-pear-%{modname}
 Provides:	php(%{modname}) = %{version}
+Obsoletes:	php-pecl-bcompiler < 1.0.2-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
